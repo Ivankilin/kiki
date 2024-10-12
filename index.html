@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мессенджер</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>Мессенджер</h1>
+    <input id="messageInput" placeholder="Введите сообщение" />
+    <button id="sendButton">Отправить</button>
+    <ul id="messagesList"></ul>
+
+    <script>
+        const socket = io();
+
+        document.getElementById('sendButton').onclick = () => {
+            const message = document.getElementById('messageInput').value;
+            socket.emit('sendMessage', message);
+            document.getElementById('messageInput').value = '';
+        };
+
+        socket.on('receiveMessage', (message) => {
+            const li = document.createElement('li');
+            li.textContent = message;
+            document.getElementById('messagesList').appendChild(li);
+        });
+    </script>
+</body>
+</html>

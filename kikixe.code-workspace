@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"name": "github.codespaces-1.16.18",
+			"path": "../../../.vscode/extensions/github.codespaces-1.16.18"
+		}
+	],
+	"settings": {
+		"terminal.integrated.accessibleViewPreserveCursorPosition": true,
+		"cursor.chat.alwaysSearchWeb": false,
+		"cursor.chat.collapseInputBoxPills": false,
+		"cursor.chat.defaultNoContext": false
+	},
+	"react": {
+		"components": [
+			"MessageForm"
+		]
+	},												
+	"society2": {
+		"enabled": true,
+		"config": {
+			"node": "https://nodes.iota.org:443"
+		}
+	},
+	"minWeightMagnitude": 14, // Убедитесь, что это свойство поддерживается
+	"marginLeft": 10 // Убедитесь, что это свойство поддерживается
+}
